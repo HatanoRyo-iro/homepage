@@ -10,28 +10,31 @@
     <title>居酒屋いろは</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
 <body>
     
     
     <div class="wrap">
         <header class="header">
-            <div class="header_wrap">
+            <div class="header-wrap">
                 <h1 class="logo">
                     <a href="{% url 'index' %}"><img src="{% static '/iroha/images/logo.png' %}" alt="居酒屋いろは"></a>
                 </h1>
                 <nav class="nav">
                     <ul>
-                        <li><a href="{% url 'index' %}">HOME</a></li>
-                        <li><a href="{% url 'menu' %}">MENU</a></li>
-                        <li><a href="{% url 'about' %}">ABOUT</a></li>
-                        <li><a href="{% url 'access' %}">ACCESS</a></li>
+                        <li class="home"><a href="{% url 'index' %}">HOME</a></li>
+                        <li class="menu"><a href="{% url 'menu' %}">MENU</a></li>
+                        <li class="about"><a href="{% url 'about' %}">ABOUT</a></li>
+                        <li class="access"><a href="{% url 'access' %}">ACCESS</a></li>
                     </ul>
                 </nav>
-                <a href="">
-                    <p>ご予約はこちらから</p>
-                    <p>0000-00-0000</p>
+                <a class="reservation" href="tel">
+                    <div class="reservation-reset">
+                        <div class="reservation-text-wrap">
+                            <p class="reservation-text">ご予約はこちらから</p>
+                            <p class="reservation-tel">0000-00-0000</p>
+                        </div>
+                    </div>
                 </a>
             </div>
         </header>
