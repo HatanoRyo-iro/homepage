@@ -1,61 +1,48 @@
+{% extends "iroha/base.html" %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static '/iroha/css/reset.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static '/iroha/css/sample.css' %}" />
-    <title>居酒屋いろは</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
-<body>
-    
-    
-    <div class="wrap">
-        <header class="header">
-            <div class="header-wrap">
-                <h1 class="logo">
-                    <a href="{% url 'index' %}"><img src="{% static '/iroha/images/logo.png' %}" alt="居酒屋いろは"></a>
-                </h1>
-                <nav class="nav">
-                    <ul>
-                        <li class="home"><a href="{% url 'index' %}">HOME</a></li>
-                        <li class="menu"><a href="{% url 'menu' %}">MENU</a></li>
-                        <li class="about"><a href="{% url 'about' %}">ABOUT</a></li>
-                        <li class="access"><a href="{% url 'access' %}">ACCESS</a></li>
-                    </ul>
-                </nav>
-                <a class="reservation" href="tel">
-                    <div class="reservation-reset">
-                        <div class="reservation-text-wrap">
-                            <p class="reservation-text">ご予約はこちらから</p>
-                            <p class="reservation-tel">0000-00-0000</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </header>
+{% block title %}居酒屋いろは{% endblock %}
+{% block content %}
 
-        <main class="main">
-            <div class="main_wrap">
-                <section class="top">
-                    <div class="kv">
-                        
+<div class="wrap">
+    <header class="header">
+        <div class="header-wrap">
+            <h1 class="logo">
+                <a href="{% url 'index' %}"><img src="{% static '/iroha/images/logo.png' %}" alt="居酒屋いろは"></a>
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li class="home"><a href="{% url 'index' %}">HOME</a></li>
+                    <li class="menu"><a href="{% url 'menu' %}">MENU</a></li>
+                    <li class="about"><a href="{% url 'about' %}">ABOUT</a></li>
+                    <li class="access"><a href="{% url 'access' %}">ACCESS</a></li>
+                </ul>
+            </nav>
+            <a class="reservation" href="tel">
+                <div class="reservation-reset">
+                    <div class="reservation-text-wrap">
+                        <p class="reservation-text">ご予約はこちらから</p>
+                        <p class="reservation-tel">0000-00-0000</p>
                     </div>
-                </section>
-            </div>
-        </main>
-        <footer class="footer">
-            <div class="footer_wrap">
-                
-            </div>
-        </footer>
-    </div>
+                </div>
+            </a>
+        </div>
+    </header>
 
-    <script src="{% static '/iroha/js/sample.js' %}"></script>
-    
-</body>
-</html>
+    <main class="main">
+        <div class="main_wrap">
+            <section class="top">
+                <div class="kv">
+                    
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer_wrap">
+            
+        </div>
+    </footer>
+</div>
+
+{% endblock %}
